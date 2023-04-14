@@ -3,8 +3,10 @@ import 'package:kitap/controller//book_details.dart';
 import 'package:kitap/controller/drawer_menu.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key, required String firstName, required String lastName});
-  
+  final String firstName;
+  final String lastName;
+  const HomePage({super.key, required String this.firstName, required String this.lastName});
+
   @override
   State<HomePage> createState() => _HomePageState();
 }
@@ -54,7 +56,7 @@ class _HomePageState extends State<HomePage> {
           )
         ],
         title: Text(
-          'KİTAP KURDU',
+          'KİTAP KURDUNA HOŞGELDİN ${widget.firstName}',
           style: TextStyle(fontSize: 24),
         ),
           centerTitle: true,
